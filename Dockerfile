@@ -15,3 +15,8 @@ RUN pip install gdown
 RUN gdown --id 15AV8LeWY3nzCKb8RRbM8kwHAp_DUZ5gf -O original_data.zip
 RUN unzip original_data.zip && mv -r original_data/ wiki2bio/original_data/
 RUN rm original_data.zip && rm -r original_data/
+
+RUN cd wiki2bio && python preprocess.py
+
+RUN pip install nltk
+RUN python -m nltk.downloader all
