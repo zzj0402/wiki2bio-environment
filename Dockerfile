@@ -9,3 +9,9 @@ RUN apt-get install -y git-all vim htop
 WORKDIR /root/
 
 RUN git clone https://github.com/tyliupku/wiki2bio.git
+
+RUN pip install gdown
+
+RUN gdown --id 15AV8LeWY3nzCKb8RRbM8kwHAp_DUZ5gf -O original_data.zip
+RUN unzip original_data.zip && mv -r original_data/ wiki2bio/original_data/
+RUN rm original_data.zip && rm -r original_data/
