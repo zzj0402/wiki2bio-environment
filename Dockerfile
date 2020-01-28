@@ -18,7 +18,5 @@ RUN gdown --id 15AV8LeWY3nzCKb8RRbM8kwHAp_DUZ5gf -O original_data.zip
 RUN unzip -o original_data.zip
 RUN rm original_data.zip
 
-RUN python preprocess.py
-
 RUN pip install nltk
 RUN python -m nltk.downloader all
