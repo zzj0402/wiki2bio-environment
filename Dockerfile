@@ -20,3 +20,5 @@ RUN rm original_data.zip
 
 RUN pip install nltk
 RUN python -m nltk.downloader all
+
+RUN mkdir /root/log/
