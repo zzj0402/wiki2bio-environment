@@ -22,3 +22,4 @@ RUN pip install nltk
 RUN python -m nltk.downloader all
 
 RUN mkdir /root/log/
+COPY ./test.py /root/wiki2bio/

@@ -1,4 +1,5 @@
 # wiki2bio-environment
+
 Docker environment for https://github.com/tyliupku/wiki2bio
 
 ## Run
@@ -14,3 +15,19 @@ In ~/wiki2bio run `python preprocess.py`
 ## Training
 
 `python Main.py | tee /root/log/training.log`
+
+## Testing
+
+### Model File Loads
+
+Move files from loads directory to result timestamp home directory:
+
+```bash
+mv ~/wiki2bio/results/res/1580331814053/loads/69/* ../../
+```
+
+### Run test.py
+
+```bash
+python test.py | tee /root/log/test.log
+```
